@@ -17,7 +17,6 @@
         TSBean.setPrenom(prenom);
         TSBean.setNom(nom);
         TSBean.setTelephone(telephone);
-        RequestDispatcher rd = request.getRequestDispatcher("/response");
-        rd.forward(request, response);
+        response.sendRedirect("response.jsp");
     %>
 </jsp:useBean>

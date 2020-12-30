@@ -22,8 +22,14 @@
         TSBean.setLogiciel(logiciel);
         TSBean.setSystemeExploitation(os);
         TSBean.setDescription(description);
-        RequestDispatcher rd = request.getRequestDispatcher("/response");
-        rd.forward(request, response);
+        if(TSBean.getEmail().equals("andrianihary.razafindramisa@edu.esiee.fr")){
+            TSBean.setPrenom("Andrianihary");
+            TSBean.setNom("Razafindramisa");
+            TSBean.setTelephone("0612345678");
+            response.sendRedirect("response.jsp");
+        }else{
+            response.sendRedirect("regform.jsp");
+        }
     %>
 
 </jsp:useBean>

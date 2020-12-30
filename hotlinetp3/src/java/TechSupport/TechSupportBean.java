@@ -39,6 +39,7 @@ public class TechSupportBean implements Serializable {
         propertySupport = new PropertyChangeSupport(this);
     }
     
+    
     public String getEmail() {
         return email;
     }
